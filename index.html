@@ -4,24 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>Hello World Glia</title>
+
+  <script>
+    window.getGliaContext = function() {
+      function extractQueryParamValueFromString(paramName, urlString) {
+        var regex = new RegExp("[?|&]" + paramName + "=([^&]*)");
+        var executedRegex = urlString.match(regex);
+        return !executedRegex ? null : executedRegex[1];
+      }
+
+      var queryParamName = "external_session_id";
+
+      return {
+        sessionId: extractQueryParamValueFromString(queryParamName, window.location.href)
+      };
+    };
+  </script>
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <h1>Hello World Glia</h1>
-
-  <p>Welcome to my website!</p>
-
-  <img src="https://example.com/image.jpg" alt="Example image">
-
-  <script src="//api.beta.glia.com/salemove_integration.js"></script>
+  <script src="//api.beta.salemove.com/salemove_integration.js"></script>
 </body>
 
 </html>
