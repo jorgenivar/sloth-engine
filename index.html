@@ -5,23 +5,9 @@
   <meta charset="utf-8">
   <title>Hello World Glia</title>
 
-  <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
-
-  <script>
-    window.getGliaContext = function() {
-      function extractQueryParamValueFromString(paramName, urlString) {
-        var regex = new RegExp("[?|&]" + paramName + "=([^&]*)");
-        var executedRegex = urlString.match(regex);
-        return !executedRegex ? null : executedRegex[1];
-      }
-
-      var queryParamName = "external_session_id";
-
-      return {
-        sessionId: extractQueryParamValueFromString(queryParamName, window.location.href)
-      };
-    };
-  </script>
+<!-- Glia script -->
+<script src="https://api.beta.glia.com/salemove_integration.js"></script>
+<!-- Glia script end -->
 
   <style>
     /* Style the navigation bar */
@@ -124,9 +110,6 @@
 
   <img class="placeholder-image" src="https://via.placeholder.com/500x300" alt="Placeholder Image 1">
   <img class="placeholder-image" src="https://via.placeholder.com/500x300" alt="Placeholder Image 2">
-
-  <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
-  
 </body>
 
 </html>
