@@ -9,28 +9,6 @@
 <!-- Glia script -->
 <script src="https://api.beta.glia.com/salemove_integration.js"></script>
 <!-- Glia script end -->
-<script>
-  // Add the customization code here
-  sm.getApi({version: 'v1'}).then(function(glia) {
-    glia.updateInformation({
-      customAttributes: {
-        product: 'home-insurance'
-      }
-    }).then(function() {
-      // Additional code to execute after updating information
-      // ...
-    }).catch(function(error) {
-      if (error.cause == glia.ERRORS.NETWORK_TIMEOUT) {
-        // Handle specific error case
-        // ...
-      } else {
-        // Handle other errors
-        // ...
-      }
-    });
-  });
-</script>
-  
   
   <style>
     /* Style the navigation bar */
